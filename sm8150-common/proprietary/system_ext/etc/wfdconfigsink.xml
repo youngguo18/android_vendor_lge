@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
     <!--
-        Copyright (C) 2012 - 2020 Qualcomm Technologies, Inc.
+        Copyright (C) 2012 - 2019 Qualcomm Technologies, Inc.
         All Rights Reserved.
         Confidential and Proprietary - Qualcomm Technologies, Inc.
     -->
@@ -155,7 +155,7 @@
             <VideoCodec7>
                 <CodecName>H.265</CodecName>
                 <Profile>0</Profile>
-                <Level>4</Level>
+                <Level>6</Level>
                 <HorizontalResolution>4096</HorizontalResolution>
                 <VerticalResolution>2160</VerticalResolution>
                 <Latency>0</Latency>
@@ -230,8 +230,8 @@
         <RTPDumpEnable>
             <!-- DEPRECATED -->
             <!-- For enabling RTP parser dumping set
-                 persist.vendor.sys.debug.rtp.enable_dump to 1
-                 /sdcard/Download/rtpdump.ts
+                 persist.vendor.debug.rtp.enable_dump to 1
+                 /data/media/rtpdump.ts
                  -->
         </RTPDumpEnable>
 
@@ -388,8 +388,8 @@
             </BIT7>
           <!-- 1920x1080p60  -->
             <BIT8>
-                <MinBitrate>7000000</MinBitrate>
-                <MaxBitrate>13000000</MaxBitrate>
+                <MinBitrate>10000000</MinBitrate>
+                <MaxBitrate>20000000</MaxBitrate>
             </BIT8>
           <!-- 1920x1080i60  -->
             <BIT9>
@@ -762,12 +762,6 @@
         handling AV sync
     -->
     <DisableAVSync>0</DisableAVSync>
-
-    <!--
-        Push video frames to display in async mode, so that display can drop frames
-        if frames are pushed faster than vsync.
-    -->
-    <PushVideoFrameInASyncMode>0</PushVideoFrameInASyncMode>
 
     <!--
         To drop video frame in case parser detects and reports packet loss over the air
