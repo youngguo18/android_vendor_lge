@@ -168,6 +168,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/flash-common/proprietary/vendor/lib/libspl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspl.so \
     vendor/lge/flash-common/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
     vendor/lge/flash-common/proprietary/vendor/lib/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtzdrmgenprov.so \
+    vendor/lge/flash-common/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so \
     vendor/lge/flash-common/proprietary/vendor/lib/rfsa/adsp/AlacDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/AlacDecoderModule.so.1 \
     vendor/lge/flash-common/proprietary/vendor/lib/rfsa/adsp/ApeDecoderModule.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/ApeDecoderModule.so.1 \
     vendor/lge/flash-common/proprietary/vendor/lib/rfsa/adsp/AudioContextDetection.so.1:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/AudioContextDetection.so.1 \
@@ -281,6 +282,7 @@ PRODUCT_COPY_FILES += \
     vendor/lge/flash-common/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
     vendor/lge/flash-common/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
     vendor/lge/flash-common/proprietary/vendor/lib64/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwvhidl.so \
+    vendor/lge/flash-common/proprietary/vendor/lib64/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediadrm/libwvdrmengine.so \
     vendor/lge/flash-common/proprietary/vendor/lib64/vendor.qti.hardware.qseecom@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qseecom@1.0.so \
     vendor/lge/flash-common/proprietary/vendor/usr/idc/goodix_fp_key.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/goodix_fp_key.idc \
     vendor/lge/flash-common/proprietary/vendor/usr/keylayout/goodix_fp_key.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_fp_key.kl
