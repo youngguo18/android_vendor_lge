@@ -68,7 +68,7 @@ android_app_import {
 	name: "TimeService",
 	owner: "lge",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
