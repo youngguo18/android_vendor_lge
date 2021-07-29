@@ -68,7 +68,7 @@ android_app_import {
 	name: "TimeService",
 	owner: "lge",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -182,13 +182,6 @@ dex_import {
 }
 
 dex_import {
-	name: "QtiTelephonyServicelibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/QtiTelephonyServicelibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
 	name: "audiosphere",
 	owner: "lge",
 	jars: ["proprietary/system_ext/framework/audiosphere.jar"],
@@ -206,27 +199,6 @@ dex_import {
 	name: "com.qti.dpmframework",
 	owner: "lge",
 	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.2-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -266,9 +238,9 @@ dex_import {
 }
 
 dex_import {
-	name: "embmslibrary",
+	name: "lgdataservice-manager",
 	owner: "lge",
-	jars: ["proprietary/system_ext/framework/embmslibrary.jar"],
+	jars: ["proprietary/system_ext/framework/lgdataservice-manager.jar"],
 	system_ext_specific: true,
 }
 
@@ -280,9 +252,16 @@ dex_import {
 }
 
 dex_import {
-	name: "qti-telephony-common",
+	name: "vendor.lge.hardware.lgdata-V1.0-java",
 	owner: "lge",
-	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
+	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.lgdata-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.lge.hardware.lgdata-V1.1-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.lgdata-V1.1-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -304,13 +283,6 @@ dex_import {
 	name: "vendor.qti.hardware.alarm-V1.0-java",
 	owner: "lge",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.capabilityconfigstore-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar"],
 	system_ext_specific: true,
 }
 
