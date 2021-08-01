@@ -3,9 +3,10 @@
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
+# LGE_CHANGE_S, miracast-dev@lge.com, added 'system' permission to access to HDCP2 module
 service wifidisplayhalservice /vendor/bin/wifidisplayhalservice
   class main
   user system
-  group inet input audio media uhid
+  group inet input audio media uhid system
   capabilities NET_RAW
 
