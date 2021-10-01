@@ -283,6 +283,13 @@ dex_import {
 }
 
 dex_import {
+	name: "com.lge.ims.httpTxn",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/com.lge.ims.httpTxn.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "com.qti.dpmframework",
 	owner: "lge",
 	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
@@ -346,16 +353,65 @@ dex_import {
 }
 
 dex_import {
-	name: "lgdataservice-manager",
+	name: "qcrilhook",
 	owner: "lge",
-	jars: ["proprietary/system_ext/framework/lgdataservice-manager.jar"],
+	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
 	system_ext_specific: true,
 }
 
 dex_import {
-	name: "qcrilhook",
+	name: "uimgbalibrary",
 	owner: "lge",
-	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
+	jars: ["proprietary/system_ext/framework/uimgbalibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimgbamanagerlibrary",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/uimgbamanagerlibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimlpalibrary",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/uimlpalibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "qti-telephony-common",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimremoteclientlibrary",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/uimremoteclientlibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimremoteserverlibrary",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/uimremoteserverlibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimremotesimlocklibrary",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/uimremotesimlocklibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "uimservicelibrary",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/uimservicelibrary.jar"],
 	system_ext_specific: true,
 }
 
@@ -433,6 +489,62 @@ dex_import {
 	name: "vendor.qti.hardware.mwqemadapter-V1.0-java",
 	owner: "lge",
 	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.mwqemadapter-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.callcapability-V1.0-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.callinfo-V1.0-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.factory-V1.0-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.factory-V1.1-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V1.0-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V1.1-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V2.0-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "vendor.qti.ims.rcsconfig-V2.1-java",
+	owner: "lge",
+	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar"],
 	system_ext_specific: true,
 }
 

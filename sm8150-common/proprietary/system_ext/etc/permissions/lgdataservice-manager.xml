@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<permissions>
-    <library name="product.lge.data.lgdataservice-manager"
-             file="/system_ext/framework/lgdataservice-manager.jar" />
-</permissions>
