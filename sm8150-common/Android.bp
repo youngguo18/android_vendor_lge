@@ -6,40 +6,43 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-	name: "libantradio",
+	name: "libfastcvopt",
 	owner: "lge",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/system_ext/lib/libantradio.so"],
+			srcs: ["proprietary/vendor/lib/libfastcvopt.so"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/system_ext/lib64/libantradio.so"],
+			srcs: ["proprietary/vendor/lib64/libfastcvopt.so"],
 		},
 	},
 	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
-	system_ext_specific: true,
+	soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.qti.hardware.fm@1.0",
+	name: "libthermalclient",
 	owner: "lge",
 	strip: {
 		none: true,
 	},
 	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libthermalclient.so"],
+		},
 		android_arm64: {
-			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.fm@1.0.so"],
+			srcs: ["proprietary/vendor/lib64/libthermalclient.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
-	system_ext_specific: true,
+	soc_specific: true,
 }
 
 android_app_import {
@@ -79,6 +82,17 @@ android_app_import {
 	name: "com.qualcomm.qti.gpudrivers.msmnile.api30",
 	owner: "lge",
 	apk: "proprietary/vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "pasrservice",
+	owner: "lge",
+	apk: "proprietary/vendor/app/pasrservice/pasrservice.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -87,32 +101,10 @@ android_app_import {
 }
 
 android_app_import {
-	name: "com.qualcomm.qti.improvetouch.service",
+	name: "HotwordEnrollmentOKGoogleHEXAGON",
 	owner: "lge",
-	apk: "proprietary/vendor/app/com.qualcomm.qti.improvetouch.service/com.qualcomm.qti.improvetouch.service.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	soc_specific: true,
-}
-
-android_app_import {
-	name: "PowerOffAlarm",
-	owner: "lge",
-	apk: "proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
-}
-
-android_app_import {
-	name: "HotwordEnrollmentOKGoogleWCD9340",
-	owner: "lge",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk",
-	certificate: "platform",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -121,37 +113,15 @@ android_app_import {
 }
 
 android_app_import {
-	name: "HotwordEnrollmentXGoogleWCD9340",
+	name: "HotwordEnrollmentXGoogleHEXAGON",
 	owner: "lge",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk",
-	certificate: "platform",
+	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
 	privileged: true,
 	product_specific: true,
-}
-
-android_app_import {
-	name: "DualScreenFirmware",
-	owner: "lge",
-	apk: "proprietary/system_ext/app/DualScreenFirmware/DualScreenFirmware.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "LgNfc",
-	owner: "lge",
-	apk: "proprietary/system_ext/app/LgNfc/LgNfc.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
 }
 
 android_app_import {
@@ -162,73 +132,6 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "WigigTetheringRRO",
-	owner: "lge",
-	apk: "proprietary/system_ext/app/WigigTetheringRRO/WigigTetheringRRO.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "atfwd",
-	owner: "lge",
-	apk: "proprietary/system_ext/app/atfwd/atfwd.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "datastatusnotification",
-	owner: "lge",
-	apk: "proprietary/system_ext/app/datastatusnotification/datastatusnotification.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "uimremoteclient",
-	owner: "lge",
-	apk: "proprietary/system_ext/app/uimremoteclient/uimremoteclient.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "uimremoteserver",
-	owner: "lge",
-	apk: "proprietary/system_ext/app/uimremoteserver/uimremoteserver.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
-	name: "WfdService",
-	owner: "lge",
-	apk: "proprietary/system_ext/priv-app/WfdService/WfdService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
 	system_ext_specific: true,
 }
 
@@ -253,305 +156,6 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "WfdCommon",
-	owner: "lge",
-	jars: ["proprietary/system/framework/WfdCommon.jar"],
-}
-
-dex_import {
-	name: "tcmclient",
-	owner: "lge",
-	jars: ["proprietary/system/framework/tcmclient.jar"],
-}
-
-dex_import {
-	name: "audiosphere",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/audiosphere.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.android.hotwordenrollment.common.util",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.lge.ims.httpTxn",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.lge.ims.httpTxn.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qti.dpmframework",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.imscmservice-V2.2-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.2-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.qualcomm.qti.uceservice-V2.3-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.3-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "dpmapi",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qcrilhook",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "uimgbalibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/uimgbalibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "uimgbamanagerlibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/uimgbamanagerlibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "uimlpalibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/uimlpalibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qti-telephony-common",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/qti-telephony-common.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "uimremoteclientlibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/uimremoteclientlibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "uimremoteserverlibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/uimremoteserverlibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "uimremotesimlocklibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/uimremotesimlocklibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "uimservicelibrary",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/uimservicelibrary.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.dualscreen-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.dualscreen-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.dualscreen-V1.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.dualscreen-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.lgdata-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.lgdata-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.lgdata-V1.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.lgdata-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.property-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.property-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.property-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.property-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.property-V2.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.property-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.lge.hardware.property-V2.2-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.lge.hardware.property-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.alarm-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.data.latency-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.mwqemadapter-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.mwqemadapter-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.callcapability-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.callinfo-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V1.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V1.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V1.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsconfig-V2.1-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.latency-V2.0-java",
-	owner: "lge",
-	jars: ["proprietary/system_ext/framework/vendor.qti.latency-V2.0-java.jar"],
 	system_ext_specific: true,
 }
 
@@ -583,18 +187,18 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "manifest_android.hardware.drm@1.3-service.widevine",
+	name: "vendor.qti.gnss@4.0-service",
 	owner: "lge",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
 
 prebuilt_etc_xml {
-	name: "vendor.qti.gnss@4.0-service",
+	name: "vendor.qti.hardware.display.allocator-service",
 	owner: "lge",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,

@@ -210,14 +210,10 @@
         <!-- CPUBW HWMON SAMPLE MS : MPCTLV3_CPUBW_HWMON_SAMPLE_MS(0x41820000) : 0x0A (10) -->
         <!-- SILVER CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG (0x41444000) : 0x00 (0) -->
         <!-- GOLD CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE (0x41444100) : 0x00 (0) -->
-        <!-- <Config
+        <Config
             Id="0x00001341" Enable="true" Timeout="3600000" Target="msmnile"
             Resources="0x43008000, 0x00, 0x4180C000, 0x00, 0x41820000, 0x0A, 0x41444000, 0x00, 
-            0x40800100, 1785, 0x40800000, 2419, 0x41444100, 0x0A"/> -->
-		 <Config
-            Id="0x00001341" Enable="true" Timeout="3600000" Target="msmnile"
-            Resources="0x43008000, 0x00, 0x4180C000, 0x00, 0x41820000, 0x0A, 0x41808000, 0x50, 0x40C20000, 45, 0x40C1C000, 50,
-                       0x41000100, 0x04, 0x41000000, 0x04, 0x41444000, 0x00, 0x41444100, 0x00, 0x42808000, 0x6, 0x40800000, 0x3AC, 0x40800100, 1800"/> <!-- silver36 : gold 53 -->
+            0x40800100, 1785, 0x40800000, 2419, 0x41444100, 0x0A"/>
 
         <!-- Rear Camera Bokeh Preview Mode : POWER_HINT_ID_BOKEH_PREVIEW -->
         <!-- LLCCBW HWMON HYST OPT : MPCTLV3_LLCBW_HWMON_HYST_OPT(0x43008000) : 0x00 (0) -->
@@ -276,14 +272,10 @@
         <!-- SILVER CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG (0x41444000) : 0x00 (0) -->
         <!-- GOLD CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE (0x41444100) : 0x00 (0) -->
         <!-- GPU - max pwrlevel 6 (freq 257 MHz)-->
-        <!-- <Config
+        <Config
             Id="0x00001346" Enable="true" Timeout="3600000" Target="msmnile"
             Resources="0x43008000, 0x00, 0x4180C000, 0x00, 0x41820000, 0x06,
-            0x40800100, 1382, 0x40800000, 1056, 0x40C00000, 0x02, 0x42808000, 0x6"/> -->
-	<Config
-            Id="0x00001346" Enable="true" Timeout="3600000" Target="msmnile"
-            Resources="0x43008000, 0x00, 0x4180C000, 0x00, 0x41820000, 0x0A, 0x41808000, 0x5A, 0x40C20000, 40, 0x40C1C000, 50, 0x40408000, 0x32, 0x41444000, 0x00, 0x41444100, 0x00, 0x42808000, 0x6,
-	               0x40800100, 1382, 0x40800000, 1056, 0x40804100, 0x5EC"/>
+            0x40800100, 1382, 0x40800000, 1056, 0x40C00000, 0x02, 0x42808000, 0x6"/>
 
         <!-- Front Camera FHD 30FPS Recording Mode : POWER_HINT_ID_VIDEO_ENCODE_FHD30_FRONT -->
         <!-- SCHED DOWNMIGRATE : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000) : 0x3C (60)-->

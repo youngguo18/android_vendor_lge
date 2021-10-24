@@ -1,4 +1,0 @@
-service vendor.lge-dualscreen-hal-1-1 /vendor/bin/hw/vendor.lge.hardware.dualscreen@1.1-service
-    class hal
-    user root
-    group root system radio wakelock
