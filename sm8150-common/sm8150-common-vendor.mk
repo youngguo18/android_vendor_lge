@@ -252,7 +252,6 @@ PRODUCT_COPY_FILES += \
     vendor/lge/sm8150-common/proprietary/vendor/etc/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
     vendor/lge/sm8150-common/proprietary/vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml \
     vendor/lge/sm8150-common/proprietary/vendor/etc/permissions/vendor.qti.hardware.factory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.qti.hardware.factory.xml \
-    vendor/lge/sm8150-common/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/lge/sm8150-common/proprietary/vendor/etc/qdcm_calib_data_R66456_MD_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_R66456_MD_cmd_mode_dsi_panel.xml \
     vendor/lge/sm8150-common/proprietary/vendor/etc/qdcm_calib_data_RM69299_MD_cmd_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_RM69299_MD_cmd_mode_dsi_panel.xml \
     vendor/lge/sm8150-common/proprietary/vendor/etc/qdcm_calib_data_SW43408A_cmd_mode_dsc_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_SW43408A_cmd_mode_dsc_dsi_panel.xml \
